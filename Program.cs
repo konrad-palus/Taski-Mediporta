@@ -1,3 +1,4 @@
+using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Reflection;
@@ -17,10 +18,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestApi-Mediporta", Version = "v1" });
-    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    c.IncludeXmlComments(xmlPath);
-}); builder.Services.AddScoped<ITagService, TagService>();
+    c.MapType<SortByEnum>(() => new OpenApiSchema { Type = "string", Enum = Enum.GetNames(typeof(SortByEnum)).Select(name => new OpenApiString(name)).ToList<IOpenApiAny>() });
+    c.MapType<SortOrderEnum>(() => new OpenApiSchema { Type = "string", Enum = Enum.GetNames(typeof(SortOrderEnum)).Select(name => new OpenApiString(name)).ToList<IOpenApiAny>() });
+
+    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
+});
+
+builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddHostedService<TagImportHostedService>();
 builder.Services.AddMemoryCache();
 builder.Services.AddHttpClient();

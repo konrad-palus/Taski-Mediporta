@@ -35,6 +35,7 @@ public class TagService : ITagService
     public async Task ImportTagsAsync()
     {
         _logger.LogInformation("Starting {Method}", nameof(ImportTagsAsync));
+
         try
         {
             if (_cache.TryGetValue(CacheKey, out _))
@@ -42,14 +43,17 @@ public class TagService : ITagService
                 _cache.Remove(CacheKey);
             }
 
-            var fetchedTags = new List<Tag>();
-            for (int i = 1; i <= _pages; i++)
-            {
-                var tagsResponse = await FetchTagsFromApi(_pageSize, i);
-                if (tagsResponse?.Items?.Any() != true) break;
+            var fetchTasks = Enumerable.Range(1, _pages)
+                                       .Select(page => FetchTagsFromApi(_pageSize, page))
+                                       .ToList();
 
-                fetchedTags.AddRange(tagsResponse.Items.Select(tagItem => new Tag(tagItem)));
-            }
+            var fetchedTagsResponses = await Task.WhenAll(fetchTasks);
+
+            var fetchedTags = fetchedTagsResponses
+                                .Where(response => response?.Items?.Any() == true)
+                                .SelectMany(response => response.Items)
+                                .Select(tagItem => new Tag(tagItem))
+                                .ToList();
 
             if (fetchedTags.Any())
             {
