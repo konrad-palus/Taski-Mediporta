@@ -5,8 +5,6 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskApi-Mediporta", "TaskApi-Mediporta.csproj", "{BA932224-1590-4685-BBF9-54BDA665E78D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskApi-MediportaUnitTests", "..\TaskApi-MediportaUnitTests\TaskApi-MediportaUnitTests.csproj", "{8A487ABC-C1D6-4615-AB1D-BC799FCD4A76}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
