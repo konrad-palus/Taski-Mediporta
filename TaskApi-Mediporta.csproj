@@ -7,7 +7,10 @@
     <InvariantGlobalization>true</InvariantGlobalization>
     <RootNamespace>TaskApi_Mediporta</RootNamespace>
   </PropertyGroup>
-
+ <PropertyGroup>
+  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  <NoWarn>$(NoWarn);1591</NoWarn>
+</PropertyGroup>
   <ItemGroup>
     <Compile Remove="Persistance\**" />
     <Compile Remove="Presistance\**" />
@@ -31,7 +34,6 @@
 
   <ItemGroup>
     <Folder Include="Exceptions\" />
-
   </ItemGroup>
 
 </Project>
