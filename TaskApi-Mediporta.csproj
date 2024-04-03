@@ -11,6 +11,9 @@
   <GenerateDocumentationFile>true</GenerateDocumentationFile>
   <NoWarn>$(NoWarn);1591</NoWarn>
 </PropertyGroup>
+	<PropertyGroup>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
   <ItemGroup>
     <Compile Remove="Persistance\**" />
     <Compile Remove="Presistance\**" />

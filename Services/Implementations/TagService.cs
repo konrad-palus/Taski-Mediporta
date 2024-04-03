@@ -199,7 +199,7 @@ public class TagService : ITagService
         return sortedTags;
     }
 
-    // <summary>
+    /// <summary>
     /// Paginates the sorted collection of tags based on the specified page number and page size.
     /// </summary>
     /// <param name="sortedTags">The sorted collection of tags.</param>
