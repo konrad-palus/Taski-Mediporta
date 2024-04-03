@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskApi-Mediporta", "TaskApi-Mediporta.csproj", "{BA932224-1590-4685-BBF9-54BDA665E78D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskApi-MediportaUnitTests", "..\TaskApi-MediportaUnitTests\TaskApi-MediportaUnitTests.csproj", "{23FDE5AD-248E-4AF5-821E-8AEFF1CA89E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskApi-MediportaUnitTests", "..\TaskApi-MediportaUnitTests\TaskApi-MediportaUnitTests.csproj", "{8A487ABC-C1D6-4615-AB1D-BC799FCD4A76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{BA932224-1590-4685-BBF9-54BDA665E78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA932224-1590-4685-BBF9-54BDA665E78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA932224-1590-4685-BBF9-54BDA665E78D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23FDE5AD-248E-4AF5-821E-8AEFF1CA89E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23FDE5AD-248E-4AF5-821E-8AEFF1CA89E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23FDE5AD-248E-4AF5-821E-8AEFF1CA89E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23FDE5AD-248E-4AF5-821E-8AEFF1CA89E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A487ABC-C1D6-4615-AB1D-BC799FCD4A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A487ABC-C1D6-4615-AB1D-BC799FCD4A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A487ABC-C1D6-4615-AB1D-BC799FCD4A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A487ABC-C1D6-4615-AB1D-BC799FCD4A76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
